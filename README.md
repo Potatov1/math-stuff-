@@ -12,3 +12,6 @@ its got 2 modes the one on top is how i originally did it and the bottom is the 
 file 1 is a basic quadratic equation solver made using just basic python. its still a little crude and doesn't display roots and 
 other such irrationalities properly. I intend to add better notation and eventually a graph feature (though that will depend how much time 
 i have and how bored i am lol)
+
+
+update : file 1 now has a rudimentary fixed range graph feature and can handle edge cases with irrational numbers
