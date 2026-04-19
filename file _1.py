@@ -1,40 +1,30 @@
-import matplotlib.pyplot as plt 
-import numpy as np
-base= int(input("value of base constant "))
-a = int(input("low limit of exponential value "))
-b = int(input("high limit of exponential value  "))
+import matplotlib.pyplot as plt
+import cmath
+a = float(input("please enter value of coefficent of x^2 "))
+b = float(input("please enter value of coefficent of x "))
+c = float(input("please enter value of the constant term "))
 
-c=[]
-y=[]
-for i in range (a,b):
-    c.append(i)
-for o in c:
-    ex_val=(base**o)
-    y.append(ex_val)
+D = (b**2 - 4*a*c)
 
-plt.plot(c, y)
 
-plt.xlabel("x")
-plt.ylabel("2^x")
-plt.title("Exponential Function")
+
+sol_1 = (-b + cmath.sqrt(D)) / (2*a)  #using cmath to handle exeception cases
+sol_2 = (-b - cmath.sqrt(D)) / (2*a)
+
+
+print("the first soln is",sol_1)
+print("the second soln is",sol_2)
+t = []
+
+z=[]
+
+for i in range(-100,101):
+    u = a*i**2 + b*i + c
+    z.append(u)
+    t.append(i)
 plt.grid()
-
-
-
+plt.plot(t,z)
 plt.show()
 
 
-c = np.linspace(a, b, 100)
-y = base**c
 
-
-plt.plot(c, y)
-
-plt.xlabel("x")
-plt.ylabel("base^x")
-plt.title("Exponential Function")
-plt.grid()
-
-
-
-plt.show()
